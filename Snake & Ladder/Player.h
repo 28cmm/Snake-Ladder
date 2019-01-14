@@ -15,6 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSNumber *currentSquare;
 @property NSDictionary *gameLogic;
 @property NSDictionary *goingDown;
+@property NSString *name;
+
 -(BOOL)roll;
 @end
 

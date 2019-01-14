@@ -36,7 +36,7 @@
 -(BOOL)roll{
     NSNumber *row =@(arc4random_uniform(6)+1);
     _currentSquare = @(_currentSquare.intValue + row.intValue) ;
-    NSLog(@"You rolled %@ \n",row);
+    NSLog(@"%@ You rolled %@ \n",_name,row);
     if(_currentSquare.intValue >= 100){
         NSLog(@"congrduation you win");
         return NO;
