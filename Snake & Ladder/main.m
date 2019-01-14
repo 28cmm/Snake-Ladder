@@ -7,11 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "InputHandler.h"
+#import "Player.h"
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        InputHandler *inputHandler = [InputHandler new];
+        Player *player =[Player new];
+        BOOL gameOn = YES;
+        while(gameOn){
+            NSString *userInput = [inputHandler convertToString:@"please enter a command"];
+            if([userInput.lowercaseString isEqual: @"roll"] ||[userInput.lowercaseString isEqual: @"r"]){
+                gameOn = [player roll];
+            }
+        }
     }
     return 0;
 }
